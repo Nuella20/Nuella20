@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CashClicker - Earn Money While You Play</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>💰 CashClicker</h1>
+            <p>Click to earn, upgrade to grow!</p>
+        </div>
+
+        <!-- Main Game Area -->
+        <div class="game-area">
+            <!-- Stats -->
+            <div class="stats">
+                <div class="stat">
+                    <span class="label">Balance:</span>
+                    <span class="value" id="balance">$0</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Per Click:</span>
+                    <span class="value" id="perClick">$1</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Per Second:</span>
+                    <span class="value" id="perSecond">$0</span>
+                </div>
+            </div>
+
+            <!-- Main Click Button -->
+            <div class="click-area">
+                <button class="click-button" id="clickButton">💵</button>
+                <div class="click-feedback" id="clickFeedback">+$1</div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="upgrades">Upgrades</button>
+                <button class="tab-btn" data-tab="workers">Workers</button>
+                <button class="tab-btn" data-tab="cosmetics">Cosmetics</button>
+            </div>
+
+            <!-- Upgrades Tab -->
+            <div class="tab-content active" id="upgrades">
+                <div class="shop-grid" id="upgradesShop"></div>
+            </div>
+
+            <!-- Workers Tab -->
+            <div class="tab-content" id="workers">
+                <div class="shop-grid" id="workersShop"></div>
+            </div>
+
+            <!-- Cosmetics Tab -->
+            <div class="tab-content" id="cosmetics">
+                <div class="cosmetics-grid" id="cosmeticsShop"></div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <button id="resetButton" class="reset-btn">Reset Game</button>
+            <button id="exportButton" class="export-btn">Export Save</button>
+            <button id="importButton" class="import-btn">Import Save</button>
+        </div>
+    </div>
+
+    <!-- Hidden file input for import -->
+    <input type="file" id="fileInput" style="display: none;">
+
+    <script src="game.js"></script>
+</body>
+</html>
